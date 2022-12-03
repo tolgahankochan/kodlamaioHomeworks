@@ -1,0 +1,38 @@
+package business;
+
+import core.logging.Logger;
+import dataAccess.EducatorDao;
+import entities.Educator;
+
+public class EducatorManager {
+	EducatorDao educatorDao;
+	Logger[] loggers;
+
+	public EducatorManager(EducatorDao educatorDao, Logger[] loggers) {
+		this.educatorDao = educatorDao;
+		this.loggers = loggers;
+	}
+
+	public void add(Educator educator) {
+		
+		this.educatorDao.add(educator);
+		System.out.println(educator.getFirstName() + " " + educator.getLastName() + " added.");
+		
+		for (Logger logger : loggers) {
+			logger.log(educator.getFirstName()+" "+educator.getLastName());
+		}
+
+	}
+
+	public void delete(Educator educator) {
+		
+		this.educatorDao.delete(educator);
+		System.out.println(educator.getFirstName() + " " + educator.getLastName() + " Successfully deleted");
+	}
+
+	public void updadate(Educator educator) {
+		
+		this.educatorDao.update(educator);
+		System.out.println(educator.getFirstName() + " " + educator.getLastName() + " Successfully updated");
+	}
+}

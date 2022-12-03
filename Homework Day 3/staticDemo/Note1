@@ -1,0 +1,9 @@
+GENELDE : 
+
+Kullan - Bırak araçlar public ile kullanılır. 
+
+Eğer her sınıfa ve özelliğe public doğrultusunda ulaşırsak bu doğru olmaz çünkü değişkene atayacağımız değer
+tüm kullanıcılar için aynı olabilir ve bu sebeple sorunlara yol açabilir.
+
+
+

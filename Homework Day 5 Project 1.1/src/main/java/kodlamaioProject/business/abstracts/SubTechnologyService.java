@@ -1,0 +1,28 @@
+package kodlamaioProject.business.abstracts;
+
+import java.util.List;
+
+import kodlamaioProject.business.requests.subTechnology.CreateSubTechnologyRequest;
+import kodlamaioProject.business.requests.subTechnology.DeleteSubTechnologyRequest;
+import kodlamaioProject.business.requests.subTechnology.GetByIdSubTechnologyRequest;
+import kodlamaioProject.business.requests.subTechnology.UpdateSubTechnologyRequest;
+import kodlamaioProject.business.responses.subTechnology.CreateSubTechnologyResponse;
+import kodlamaioProject.business.responses.subTechnology.DeleteSubTechnologyResponse;
+import kodlamaioProject.business.responses.subTechnology.GetAllSubTechnologyResponse;
+import kodlamaioProject.business.responses.subTechnology.GetByIdSubTechnologyResponse;
+import kodlamaioProject.business.responses.subTechnology.UpdateSubTechnologyResponse;
+
+public interface SubTechnologyService {
+
+	CreateSubTechnologyResponse add(CreateSubTechnologyRequest createSubTechnologyRequest)throws Exception;
+	
+	UpdateSubTechnologyResponse update(UpdateSubTechnologyRequest updateSubTechnologyRequest)throws Exception;
+	
+	DeleteSubTechnologyResponse delete(DeleteSubTechnologyRequest deleteSubTechnologyRequest)throws Exception;
+
+	List<GetAllSubTechnologyResponse>getAll();
+	
+	GetByIdSubTechnologyResponse getById(GetByIdSubTechnologyRequest getByIdSubTechnologyRequest);
+	
+	
+}
